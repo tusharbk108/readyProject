@@ -30,6 +30,7 @@
   </distributionManagement>
 
   <build>
+           <finalName>springboot-docker-demo.jar</finalName>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
