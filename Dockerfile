@@ -1,7 +1,5 @@
-# Pull base image 
-From tomcat:8-jre8 
-
-# Maintainer 
-MAINTAINER "valaxytech@gmail.com" 
-COPY ./webapp.war /usr/local/tomcat/webapps
+FROM openjdk:11
+EXPOSE 8080
+ADD target/springboot-docker-demo-0.0.1-SNAPSHOT.jar springboot-docker-demo.jar
+ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]
 
