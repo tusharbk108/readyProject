@@ -1,5 +1,3 @@
-FROM openjdk:11
-EXPOSE 8080
-ADD target/springboot-docker-demo-0.0.1-SNAPSHOT.jar springboot-docker-demo.jar
-ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]
+FROM tomcat:9
+COPY target/*.war C:\software\apache-tomcat-9.0.53\apache-tomcat-9.0.53\webapps
 
